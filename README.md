@@ -5,7 +5,9 @@ they are configured to be used as "compute nodes". When you later make
 function calls, either synchronous (with the "call" function) or
 asynchronous (with the "cast" function) the call will be evaluated on
 the "next" node, where the "next" node is chosen in a simple
-round-robin fashion. 
+round-robin fashion among the nodes that have been connected to the
+cluster and are configured to take part in the computations (by
+setting available_for_processing to "true" in sys.config).
 
 This, rather naive, approach is obviously not suitable for all types
 of function calls as the cost for calling a function is relatively
