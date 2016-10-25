@@ -22,10 +22,16 @@ A framework for making rpc calls to nodes in a cluster
 processing you add the following to sys.config (nodes in the cluster
 that do not have this setting will not do any processing). 
    ```
+[
+...
+
  {dawn, [
          {available_for_processing, true}
         ]}
    ```
+
+...
+]
 
 
 ## Usage
