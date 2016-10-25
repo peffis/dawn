@@ -36,3 +36,31 @@ that do not have this setting will not do any processing).
 
 
 ## Usage
+1. Making a function call (will wait for the call to complete)
+   ```
+   Fun = ...
+   Ret = dawn:call(Fun, Args)
+   
+   Example:
+   Ret = dawn:call(fun os:cmd/1, ["shutdown -r now"]),
+   ...
+   
+   ```
+   The call will be evaluated on the "next" available node, where "next"
+   is chosen in a round-robin fashion. The call is blocking and the 
+   value of the function evaluated is returned. 
+
+
+2. Making a function cast (a non-blocking, asynchronous call)
+   ```
+   Fun = ...
+   dawn:cast(Fun, Args)
+   
+   Example:
+   dawn:call(fun os:cmd/1, ["shutdown -r now"]),
+   ...
+   ```
+   The call will be evaluated on the "next" available node, where "next"
+   is chosen in a round-robin fashion. The call is non-blocking and no 
+   return value is available. 
+
