@@ -57,8 +57,10 @@ that do not have this setting will not do any processing).
    Ret = dawn:call(Fun, Args)
    
    Example:
-   Ret = dawn:call(fun os:cmd/1, ["shutdown -r now"]),
-   ...
+   > Ret = dawn:call(fun os:cmd/1, ["shutdown -r now"]).
+   > Ret.
+   "The system is going down for system reboot NOW!"
+   >
    
    ```
    The call will be evaluated on the "next" available node, where "next"
@@ -72,8 +74,9 @@ that do not have this setting will not do any processing).
    dawn:cast(Fun, Args)
    
    Example:
-   dawn:call(fun os:cmd/1, ["shutdown -r now"]),
-   ...
+   > dawn:cast(fun os:cmd/1, ["shutdown -r now"]),
+   ok
+   >
    ```
    The call will be evaluated on the "next" available node, where "next"
    is chosen in a round-robin fashion. The call is non-blocking and no 
