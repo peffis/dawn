@@ -74,7 +74,7 @@ that do not have this setting will not do any processing).
    dawn:cast(Fun, Args)
    
    Example:
-   > dawn:cast(fun os:cmd/1, ["shutdown -r now"]),
+   > dawn:cast(fun os:cmd/1, ["shutdown -r now"]).
    ok
    >
    ```
