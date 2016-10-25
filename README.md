@@ -11,7 +11,8 @@ This, rather naive, approach is obviously not suitable for all types
 of function calls as the cost for calling a function is relatively
 high, but when you want to kick off larger jobs that will take time
 and you want to spread those jobs out over the entire cluster this
-could be useful. 
+could be useful, for instance when the function you are calling has a
+lot of side effects (such as calling scripts in the underlying os). 
 
 ## Installing
 1. Add dawn dependency to your Makefile
