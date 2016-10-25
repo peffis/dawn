@@ -11,9 +11,9 @@ A framework for making rpc calls to nodes in a cluster
 2. If you are using a .app.src you should add it to the applications list
    ```
    {applications, [
-      		  ...,
-		  dawn,
-		  ...
+			...,
+			dawn,
+			...
 
                  ]},
    ```
