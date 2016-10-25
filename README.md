@@ -15,7 +15,7 @@ A framework for making rpc calls to nodes in a cluster
 			dawn,
 			...
 
-                 ]},
+   ]},
    ```
 
 3. For nodes in your cluster that you want to be available for
