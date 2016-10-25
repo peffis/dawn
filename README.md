@@ -1,5 +1,17 @@
 # dawn
-A framework for making rpc calls to nodes in a cluster
+A simple library for making rpc calls to nodes in a cluster. A
+controlling node monitors nodes as they join the cluster and checks if 
+they are configured to be used as "compute nodes". When you later make
+function calls, either synchronous (with the "call" function) or
+asynchronous (with the "cast" function) the call will be evaluated on
+the "next" node, where the "next" node is chosen in a simple
+round-robin fashion. 
+
+This, rather naive, approach is obviously not suitable for all types
+of function calls as the cost for calling a function is relatively
+high, but when you want to kick off larger jobs that will take time
+and you want to spread those jobs out over the entire cluster this
+could be useful. 
 
 ## Installing
 1. Add dawn dependency to your Makefile
