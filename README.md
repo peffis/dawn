@@ -17,7 +17,8 @@ could be useful, for instance when the function you are calling has a
 lot of side effects (such as calling scripts in the underlying os). 
 
 ## Installing
-1. Add dawn dependency to your Makefile
+1. Add dawn dependency to your erlang.mk Makefile (if you use rebar
+you will need to figure it out on your own)
    ```
    DEPS = dawn
    dep_dawn = git https://github.com/peffis/dawn master
