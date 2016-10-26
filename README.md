@@ -32,7 +32,8 @@ lot of side effects (such as calling scripts in the underlying os).
    application:set_env(dawn, available_for_processing, true)
    ```
    So the dawn application does not need to run on nodes that are only
-   computing on behalf of others. 
+   computing on behalf of others. Only the environment variable needs
+   to be set there when the node joins the cluster. 
 
 2. If you are using a .app.src you should add it to the applications list
    ```
