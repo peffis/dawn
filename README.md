@@ -23,7 +23,7 @@ lot of side effects (such as calling scripts in the underlying os).
    dep_dawn = git https://github.com/peffis/dawn master
    ```
 
-   Note: You only need this dependency on the nodes that will make
+   **Note:** You only need this dependency on the nodes that will make
    function calls to other nodes. For nodes that should only
    participate as compute nodes the only requirement for them to join
    the cluster is to set the environment variable
