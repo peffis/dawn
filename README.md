@@ -66,7 +66,7 @@ that do not have this setting will not do any processing).
    Example:
    > Ret = dawn:call(fun os:cmd/1, ["shutdown -r now"]).
    > Ret.
-   "The system is going down for system reboot NOW!"
+   "shutdown: Need to be root\n"
    >
    
    ```
