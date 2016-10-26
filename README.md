@@ -24,17 +24,11 @@ you will need to figure it out on your own)
    dep_dawn = git https://github.com/peffis/dawn master
    ```
 
-   **Note:** You only need this dependency on the nodes that will make
-   function calls to other nodes. For nodes that should only
-   participate as compute nodes the only requirement for them to join
-   the cluster is to set the environment variable
-   available_for_processing to true. Example:
-   ```
-   application:set_env(dawn, available_for_processing, true)
-   ```
-   So the dawn application does not need to run on nodes that are only
-   computing on behalf of others. Only the environment variable needs
-   to be set there when the node joins the cluster. 
+   **Note:** You will need this dependency on all nodes that will take
+   part in the compute cluster. The application dawn does however only have to
+   *run* on at least one of the nodes in the cluster. The rest, that
+   just are slaves and will run functions, will just have to have the
+   code. 
 
 2. If you are using a .app.src you should add it to the applications list
    ```
